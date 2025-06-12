@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             btnCadastroUsuario = new Button();
+            btnCadastroCliente = new Button();
             SuspendLayout();
             // 
             // btnCadastroUsuario
@@ -41,11 +42,22 @@
             btnCadastroUsuario.UseVisualStyleBackColor = true;
             btnCadastroUsuario.Click += btnCadastroUsuario_Click;
             // 
+            // btnCadastroCliente
+            // 
+            btnCadastroCliente.Location = new Point(121, 162);
+            btnCadastroCliente.Name = "btnCadastroCliente";
+            btnCadastroCliente.Size = new Size(240, 94);
+            btnCadastroCliente.TabIndex = 1;
+            btnCadastroCliente.Text = "CADASTRO CLIENTES";
+            btnCadastroCliente.UseVisualStyleBackColor = true;
+            btnCadastroCliente.Click += btnCadastroCliente_Click;
+            // 
             // PrincipalForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnCadastroCliente);
             Controls.Add(btnCadastroUsuario);
             Name = "PrincipalForm";
             Text = "PrincipalForm";
@@ -55,5 +67,7 @@
         #endregion
 
         private Button btnCadastroUsuario;
+        private Button button1;
+        private Button btnCadastroCliente;
     }
 }

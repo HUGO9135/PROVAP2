@@ -174,7 +174,6 @@
             // txtCPF
             // 
             txtCPF.Location = new Point(158, 46);
-            txtCPF.Mask = "xxx.xxx.xxx-xx";
             txtCPF.Name = "txtCPF";
             txtCPF.Size = new Size(125, 27);
             txtCPF.TabIndex = 19;
@@ -231,7 +230,6 @@
             // txtTelefone
             // 
             txtTelefone.Location = new Point(27, 152);
-            txtTelefone.Mask = "(17)98136-6849";
             txtTelefone.Name = "txtTelefone";
             txtTelefone.Size = new Size(125, 27);
             txtTelefone.TabIndex = 27;
@@ -239,7 +237,6 @@
             // txtWhatsApp
             // 
             txtWhatsApp.Location = new Point(158, 152);
-            txtWhatsApp.Mask = "(17)98136-6849";
             txtWhatsApp.Name = "txtWhatsApp";
             txtWhatsApp.Size = new Size(125, 27);
             txtWhatsApp.TabIndex = 28;
@@ -252,6 +249,7 @@
             btnBuscarCEP.TabIndex = 29;
             btnBuscarCEP.Text = "Buscar Cep";
             btnBuscarCEP.UseVisualStyleBackColor = true;
+            btnBuscarCEP.Click += btnBuscarCEP_Click;
             // 
             // btnSalvar
             // 

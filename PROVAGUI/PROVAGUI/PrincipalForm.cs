@@ -26,5 +26,11 @@ namespace PROVAGUI
             CadastroUsuarioForms cadastroForm = new CadastroUsuarioForms();
             cadastroForm.Show();
         }
+
+        private void btnCadastroCliente_Click(object sender, EventArgs e)
+        {
+            CadastroClientesForms cadastroClientesForm = new CadastroClientesForms();
+            cadastroClientesForm.Show();
+        }
     }
 }
