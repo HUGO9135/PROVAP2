@@ -111,6 +111,80 @@ namespace PROVAGUI
             string cep = txtCEP.Text.Replace("-", "").Trim();
             await BuscarEnderecoPorCEP(cep);
         }
+
+        private void lstClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstClientes.SelectedItem == null) return;
+
+            string itemSelecionado = lstClientes.SelectedItem.ToString(); // CPF - Nome
+            string cpfSelecionado = itemSelecionado.Split('-')[0].Trim();
+
+            var linhas = File.ReadAllLines(caminhoArquivo).Skip(1); // Ignora cabeçalho
+
+            foreach (var linha in linhas)
+            {
+                var dados = linha.Split(';');
+                if (dados.Length >= 11 && dados[1] == cpfSelecionado)
+                {
+                    txtNome.Text = dados[0];
+                    txtCPF.Text = dados[1];
+                    txtEmail.Text = dados[2];
+                    txtCEP.Text = dados[3];
+                    txtLogradouro.Text = dados[4];
+                    txtNumero.Text = dados[5];
+                    txtBairro.Text = dados[6];
+                    txtCidade.Text = dados[7];
+                    txtEstado.Text = dados[8];
+                    txtTelefone.Text = dados[9];
+                    txtWhatsApp.Text = dados[10];
+                    break;
+                }
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtCPF.Text))
+            {
+                MessageBox.Show("Selecione um cliente para excluir.");
+                return;
+            }
+
+            var linhas = File.ReadAllLines(caminhoArquivo).ToList();
+            var cabeçalho = linhas[0];
+            linhas = linhas.Skip(1).ToList();
+
+            int index = linhas.FindIndex(l => l.Split(';')[1] == txtCPF.Text);
+            if (index >= 0)
+            {
+                linhas.RemoveAt(index);
+                linhas.Insert(0, cabeçalho);
+                File.WriteAllLines(caminhoArquivo, linhas);
+                MessageBox.Show("Cliente excluído com sucesso!");
+                LimparCampos();
+                CarregarClientes();
+            }
+            else
+            {
+                MessageBox.Show("Cliente não encontrado.");
+            }
+        }
+
+        private void LimparCampos()
+        {
+            txtNome.Text = "";
+            txtCPF.Text = "";
+            txtEmail.Text = "";
+            txtCEP.Text = "";
+            txtLogradouro.Text = "";
+            txtNumero.Text = "";
+            txtBairro.Text = "";
+            txtCidade.Text = "";
+            txtEstado.Text = "";
+            txtTelefone.Text = "";
+            txtWhatsApp.Text = "";
+        }
+
     }
     public class ViaCepEndereco
     {
