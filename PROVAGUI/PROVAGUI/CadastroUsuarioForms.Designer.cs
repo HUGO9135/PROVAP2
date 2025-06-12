@@ -49,7 +49,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(185, 168);
+            label2.Location = new Point(185, 149);
             label2.Name = "label2";
             label2.Size = new Size(57, 20);
             label2.TabIndex = 1;
@@ -64,14 +64,14 @@
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(185, 191);
+            txtSenha.Location = new Point(185, 172);
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(125, 27);
             txtSenha.TabIndex = 3;
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(185, 233);
+            btnSalvar.Location = new Point(185, 205);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(94, 29);
             btnSalvar.TabIndex = 4;
@@ -81,7 +81,7 @@
             // 
             // btnExcluir
             // 
-            btnExcluir.Location = new Point(185, 286);
+            btnExcluir.Location = new Point(468, 326);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(94, 29);
             btnExcluir.TabIndex = 5;
@@ -92,9 +92,9 @@
             // lstUsuarios
             // 
             lstUsuarios.FormattingEnabled = true;
-            lstUsuarios.Location = new Point(622, 65);
+            lstUsuarios.Location = new Point(375, 96);
             lstUsuarios.Name = "lstUsuarios";
-            lstUsuarios.Size = new Size(112, 84);
+            lstUsuarios.Size = new Size(187, 224);
             lstUsuarios.TabIndex = 6;
             lstUsuarios.SelectedIndexChanged += lstUsuarios_SelectedIndexChanged;
             // 

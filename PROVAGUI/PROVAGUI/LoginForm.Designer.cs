@@ -37,9 +37,9 @@
             // 
             // btnEntrar
             // 
-            btnEntrar.Location = new Point(340, 301);
+            btnEntrar.Location = new Point(340, 229);
             btnEntrar.Name = "btnEntrar";
-            btnEntrar.Size = new Size(94, 29);
+            btnEntrar.Size = new Size(120, 29);
             btnEntrar.TabIndex = 9;
             btnEntrar.Text = "ENTRAR";
             btnEntrar.UseVisualStyleBackColor = true;
@@ -56,7 +56,7 @@
             // 
             txtUsuario.Location = new Point(340, 143);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(113, 27);
+            txtUsuario.Size = new Size(120, 27);
             txtUsuario.TabIndex = 7;
             // 
             // label2
