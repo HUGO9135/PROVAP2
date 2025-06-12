@@ -51,5 +51,56 @@ namespace PROVAGUI
                 lstUsuarios.Items.Add(u.Nome);
             }
         }
+        private void SalvarUsuarios()
+        {
+            string arquivo = "usuarios.csv";
+
+            var linhas = new List<string> { "usuario;senha" };
+            linhas.AddRange(usuarios.Select(u => $"{u.Nome};{u.Senha}"));
+
+            File.WriteAllLines(arquivo, linhas);
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            string nome = txtUsuario.Text.Trim();
+            string senha = txtSenha.Text.Trim();
+
+            if (string.IsNullOrEmpty(nome) || string.IsNullOrEmpty(senha))
+            {
+                MessageBox.Show("Preencha usuário e senha.");
+                return;
+            }
+
+            if (nome.Equals("ADMIN", StringComparison.OrdinalIgnoreCase))
+            {
+                MessageBox.Show("Não é permitido alterar o usuário ADMIN.");
+                return;
+            }
+
+            var usuarioExistente = usuarios.FirstOrDefault(u => u.Nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
+
+            if (usuarioExistente != null)
+            {
+               
+                usuarioExistente.Senha = senha;
+            }
+            else
+            {
+                
+                usuarios.Add(new Usuario { Nome = nome, Senha = senha });
+            }
+
+            SalvarUsuarios();
+            AtualizarLista();
+            LimparCampos();
+            MessageBox.Show("Usuário salvo com sucesso!");
+        }
+
+        private void LimparCampos()
+        {
+            txtUsuario.Text = "";
+            txtSenha.Text = "";
+        }
     }
 }
