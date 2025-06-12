@@ -19,6 +19,8 @@ namespace PROVAGUI
             InitializeComponent();
             CarregarProdutos();
             VerificarArquivo();
+
+
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -73,6 +75,67 @@ namespace PROVAGUI
             {
                 File.WriteAllText(caminhoArquivo, "codigo;nome;preco;descricao\n");
             }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (lstProdutos.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione um produto para excluir.");
+                return;
+            }
+
+            string itemSelecionado = lstProdutos.SelectedItem.ToString();
+            string codigo = itemSelecionado.Split('-')[0].Trim();
+
+            var linhas = File.ReadAllLines(caminhoArquivo).ToList();
+            int index = linhas.FindIndex(l => l.StartsWith(codigo + ";"));
+
+            if (index > 0)
+            {
+                linhas.RemoveAt(index);
+                File.WriteAllLines(caminhoArquivo, linhas);
+                MessageBox.Show("Produto excluído com sucesso!");
+                CarregarProdutos();
+                LimparCampos();
+            }
+        }
+
+        private void LimparCampos()
+        {
+            txtCodigo.Text = "";
+            txtNome.Text = "";
+            txtPreco.Text = "";
+            txtDescricao.Text = "";
+            lstProdutos.ClearSelected();
+        }
+
+        private void lstProdutos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstProdutos.SelectedItem == null) return;
+
+            string itemSelecionado = lstProdutos.SelectedItem.ToString();
+            string codigo = itemSelecionado.Split('-')[0].Trim();
+
+            var linhas = File.ReadAllLines(caminhoArquivo).Skip(1);
+
+            foreach (var linha in linhas)
+            {
+                var dados = linha.Split(';');
+                if (dados[0] == codigo)
+                {
+                    txtCodigo.Text = dados[0];
+                    txtNome.Text = dados[1];
+                    txtPreco.Text = dados[2];
+                    txtDescricao.Text = dados[3];
+                    break;
+                }
+            }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
         }
     }
 }

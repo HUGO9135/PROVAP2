@@ -88,6 +88,7 @@
             btnExcluir.TabIndex = 5;
             btnExcluir.Text = "EXCLUIR";
             btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // btnLimpar
             // 
@@ -97,6 +98,7 @@
             btnLimpar.TabIndex = 6;
             btnLimpar.Text = "LIMPAR";
             btnLimpar.UseVisualStyleBackColor = true;
+            btnLimpar.Click += btnLimpar_Click;
             // 
             // lstProdutos
             // 
@@ -105,6 +107,7 @@
             lstProdutos.Name = "lstProdutos";
             lstProdutos.Size = new Size(280, 284);
             lstProdutos.TabIndex = 7;
+            lstProdutos.SelectedIndexChanged += lstProdutos_SelectedIndexChanged;
             // 
             // label1
             // 
