@@ -20,5 +20,11 @@ namespace PROVAGUI
             usuarioLogado = usuario;
             this.Text = $"Principal - Usuário: {usuarioLogado}";
         }
+
+        private void btnCadastroUsuario_Click(object sender, EventArgs e)
+        {
+            CadastroUsuarioForms cadastroForm = new CadastroUsuarioForms();
+            cadastroForm.Show();
+        }
     }
 }

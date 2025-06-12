@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "PrincipalForm";
+            btnCadastroUsuario = new Button();
+            SuspendLayout();
+            // 
+            // btnCadastroUsuario
+            // 
+            btnCadastroUsuario.Location = new Point(383, 162);
+            btnCadastroUsuario.Name = "btnCadastroUsuario";
+            btnCadastroUsuario.Size = new Size(104, 29);
+            btnCadastroUsuario.TabIndex = 0;
+            btnCadastroUsuario.Text = "USUARIO";
+            btnCadastroUsuario.UseVisualStyleBackColor = true;
+            btnCadastroUsuario.Click += btnCadastroUsuario_Click;
+            // 
+            // PrincipalForm
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(btnCadastroUsuario);
+            Name = "PrincipalForm";
+            Text = "PrincipalForm";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnCadastroUsuario;
     }
 }
