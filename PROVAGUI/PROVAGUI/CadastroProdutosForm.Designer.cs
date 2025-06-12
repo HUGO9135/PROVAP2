@@ -35,7 +35,7 @@
             btnSalvar = new Button();
             btnExcluir = new Button();
             btnLimpar = new Button();
-            listBox1 = new ListBox();
+            lstProdutos = new ListBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -78,6 +78,7 @@
             btnSalvar.TabIndex = 4;
             btnSalvar.Text = "SALVAR";
             btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // btnExcluir
             // 
@@ -90,20 +91,20 @@
             // 
             // btnLimpar
             // 
-            btnLimpar.Location = new Point(69, 354);
+            btnLimpar.Location = new Point(71, 354);
             btnLimpar.Name = "btnLimpar";
             btnLimpar.Size = new Size(94, 29);
             btnLimpar.TabIndex = 6;
             btnLimpar.Text = "LIMPAR";
             btnLimpar.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // lstProdutos
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(661, 122);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(150, 104);
-            listBox1.TabIndex = 7;
+            lstProdutos.FormattingEnabled = true;
+            lstProdutos.Location = new Point(342, 69);
+            lstProdutos.Name = "lstProdutos";
+            lstProdutos.Size = new Size(280, 284);
+            lstProdutos.TabIndex = 7;
             // 
             // label1
             // 
@@ -150,7 +151,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(listBox1);
+            Controls.Add(lstProdutos);
             Controls.Add(btnLimpar);
             Controls.Add(btnExcluir);
             Controls.Add(btnSalvar);
@@ -173,7 +174,7 @@
         private Button btnSalvar;
         private Button btnExcluir;
         private Button btnLimpar;
-        private ListBox listBox1;
+        private ListBox lstProdutos;
         private Label label1;
         private Label label2;
         private Label label3;
