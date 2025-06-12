@@ -40,17 +40,17 @@
             label10 = new Label();
             label11 = new Label();
             label12 = new Label();
-            textBox1 = new TextBox();
-            maskedTextBox1 = new MaskedTextBox();
-            textBox2 = new TextBox();
-            maskedTextBox2 = new MaskedTextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            maskedTextBox3 = new MaskedTextBox();
-            maskedTextBox4 = new MaskedTextBox();
+            txtNome = new TextBox();
+            txtCPF = new MaskedTextBox();
+            txtEmail = new TextBox();
+            txtLogradouro = new MaskedTextBox();
+            txtBairro = new TextBox();
+            txtNumero = new TextBox();
+            txtCEP = new TextBox();
+            txtEstado = new TextBox();
+            txtCidade = new TextBox();
+            txtTelefone = new MaskedTextBox();
+            txtWhatsApp = new MaskedTextBox();
             btnBuscarCEP = new Button();
             btnSalvar = new Button();
             btnExcluir = new Button();
@@ -164,82 +164,85 @@
             label12.TabIndex = 17;
             label12.Text = "WhatsApp";
             // 
-            // textBox1
+            // txtNome
             // 
-            textBox1.Location = new Point(27, 46);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 18;
+            txtNome.Location = new Point(27, 46);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(125, 27);
+            txtNome.TabIndex = 18;
             // 
-            // maskedTextBox1
+            // txtCPF
             // 
-            maskedTextBox1.Location = new Point(158, 46);
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(125, 27);
-            maskedTextBox1.TabIndex = 19;
+            txtCPF.Location = new Point(158, 46);
+            txtCPF.Mask = "xxx.xxx.xxx-xx";
+            txtCPF.Name = "txtCPF";
+            txtCPF.Size = new Size(125, 27);
+            txtCPF.TabIndex = 19;
             // 
-            // textBox2
+            // txtEmail
             // 
-            textBox2.Location = new Point(27, 99);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(256, 27);
-            textBox2.TabIndex = 20;
+            txtEmail.Location = new Point(27, 99);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(256, 27);
+            txtEmail.TabIndex = 20;
             // 
-            // maskedTextBox2
+            // txtLogradouro
             // 
-            maskedTextBox2.Location = new Point(27, 364);
-            maskedTextBox2.Name = "maskedTextBox2";
-            maskedTextBox2.Size = new Size(125, 27);
-            maskedTextBox2.TabIndex = 21;
+            txtLogradouro.Location = new Point(27, 364);
+            txtLogradouro.Name = "txtLogradouro";
+            txtLogradouro.Size = new Size(125, 27);
+            txtLogradouro.TabIndex = 21;
             // 
-            // textBox3
+            // txtBairro
             // 
-            textBox3.Location = new Point(158, 311);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 22;
+            txtBairro.Location = new Point(158, 311);
+            txtBairro.Name = "txtBairro";
+            txtBairro.Size = new Size(125, 27);
+            txtBairro.TabIndex = 22;
             // 
-            // textBox4
+            // txtNumero
             // 
-            textBox4.Location = new Point(158, 364);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(125, 27);
-            textBox4.TabIndex = 23;
+            txtNumero.Location = new Point(158, 364);
+            txtNumero.Name = "txtNumero";
+            txtNumero.Size = new Size(125, 27);
+            txtNumero.TabIndex = 23;
             // 
-            // textBox5
+            // txtCEP
             // 
-            textBox5.Location = new Point(27, 205);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(125, 27);
-            textBox5.TabIndex = 24;
+            txtCEP.Location = new Point(27, 205);
+            txtCEP.Name = "txtCEP";
+            txtCEP.Size = new Size(125, 27);
+            txtCEP.TabIndex = 24;
             // 
-            // textBox6
+            // txtEstado
             // 
-            textBox6.Location = new Point(27, 258);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(125, 27);
-            textBox6.TabIndex = 25;
+            txtEstado.Location = new Point(27, 258);
+            txtEstado.Name = "txtEstado";
+            txtEstado.Size = new Size(125, 27);
+            txtEstado.TabIndex = 25;
             // 
-            // textBox7
+            // txtCidade
             // 
-            textBox7.Location = new Point(27, 311);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(125, 27);
-            textBox7.TabIndex = 26;
+            txtCidade.Location = new Point(27, 311);
+            txtCidade.Name = "txtCidade";
+            txtCidade.Size = new Size(125, 27);
+            txtCidade.TabIndex = 26;
             // 
-            // maskedTextBox3
+            // txtTelefone
             // 
-            maskedTextBox3.Location = new Point(27, 152);
-            maskedTextBox3.Name = "maskedTextBox3";
-            maskedTextBox3.Size = new Size(125, 27);
-            maskedTextBox3.TabIndex = 27;
+            txtTelefone.Location = new Point(27, 152);
+            txtTelefone.Mask = "(17)98136-6849";
+            txtTelefone.Name = "txtTelefone";
+            txtTelefone.Size = new Size(125, 27);
+            txtTelefone.TabIndex = 27;
             // 
-            // maskedTextBox4
+            // txtWhatsApp
             // 
-            maskedTextBox4.Location = new Point(158, 152);
-            maskedTextBox4.Name = "maskedTextBox4";
-            maskedTextBox4.Size = new Size(125, 27);
-            maskedTextBox4.TabIndex = 28;
+            txtWhatsApp.Location = new Point(158, 152);
+            txtWhatsApp.Mask = "(17)98136-6849";
+            txtWhatsApp.Name = "txtWhatsApp";
+            txtWhatsApp.Size = new Size(125, 27);
+            txtWhatsApp.TabIndex = 28;
             // 
             // btnBuscarCEP
             // 
@@ -258,6 +261,7 @@
             btnSalvar.TabIndex = 30;
             btnSalvar.Text = "SALVAR";
             btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // btnExcluir
             // 
@@ -285,17 +289,17 @@
             Controls.Add(btnExcluir);
             Controls.Add(btnSalvar);
             Controls.Add(btnBuscarCEP);
-            Controls.Add(maskedTextBox4);
-            Controls.Add(maskedTextBox3);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(maskedTextBox2);
-            Controls.Add(textBox2);
-            Controls.Add(maskedTextBox1);
-            Controls.Add(textBox1);
+            Controls.Add(txtWhatsApp);
+            Controls.Add(txtTelefone);
+            Controls.Add(txtCidade);
+            Controls.Add(txtEstado);
+            Controls.Add(txtCEP);
+            Controls.Add(txtNumero);
+            Controls.Add(txtBairro);
+            Controls.Add(txtLogradouro);
+            Controls.Add(txtEmail);
+            Controls.Add(txtCPF);
+            Controls.Add(txtNome);
             Controls.Add(label12);
             Controls.Add(label11);
             Controls.Add(label10);
@@ -328,17 +332,17 @@
         private Label label10;
         private Label label11;
         private Label label12;
-        private TextBox textBox1;
-        private MaskedTextBox maskedTextBox1;
-        private TextBox textBox2;
-        private MaskedTextBox maskedTextBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private MaskedTextBox maskedTextBox3;
-        private MaskedTextBox maskedTextBox4;
+        private TextBox txtNome;
+        private MaskedTextBox txtCPF;
+        private TextBox txtEmail;
+        private MaskedTextBox txtLogradouro;
+        private TextBox txtBairro;
+        private TextBox txtNumero;
+        private TextBox txtCEP;
+        private TextBox txtEstado;
+        private TextBox txtCidade;
+        private MaskedTextBox txtTelefone;
+        private MaskedTextBox txtWhatsApp;
         private Button btnBuscarCEP;
         private Button btnSalvar;
         private Button btnExcluir;
