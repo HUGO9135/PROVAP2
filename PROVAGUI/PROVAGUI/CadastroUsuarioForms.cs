@@ -155,5 +155,20 @@ namespace PROVAGUI
                 MessageBox.Show("Usuário excluído com sucesso!");
             }
         }
+
+        private void lstUsuarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstUsuarios.SelectedItem != null)
+            {
+                string nomeSelecionado = lstUsuarios.SelectedItem.ToString();
+                var usuario = usuarios.FirstOrDefault(u => u.Nome.Equals(nomeSelecionado, StringComparison.OrdinalIgnoreCase));
+                if (usuario != null)
+                {
+                    txtUsuario.Text = usuario.Nome;
+                    txtSenha.Text = usuario.Senha;
+                }
+
+            }
+        }
     }
 }

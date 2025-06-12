@@ -96,6 +96,7 @@
             lstUsuarios.Name = "lstUsuarios";
             lstUsuarios.Size = new Size(112, 84);
             lstUsuarios.TabIndex = 6;
+            lstUsuarios.SelectedIndexChanged += lstUsuarios_SelectedIndexChanged;
             // 
             // CadastroUsuarioForms
             // 
