@@ -82,12 +82,12 @@ namespace PROVAGUI
 
             if (usuarioExistente != null)
             {
-               
+
                 usuarioExistente.Senha = senha;
             }
             else
             {
-                
+
                 usuarios.Add(new Usuario { Nome = nome, Senha = senha });
             }
 
@@ -101,6 +101,32 @@ namespace PROVAGUI
         {
             txtUsuario.Text = "";
             txtSenha.Text = "";
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (lstUsuarios.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione um usuário para excluir.");
+                return;
+            }
+            string nomeSelecionado = lstUsuarios.SelectedItem.ToString();
+
+            if (nomeSelecionado.Equals("ADMIN", StringComparison.OrdinalIgnoreCase))
+            {
+                MessageBox.Show("Não é permitido excluir o usuário ADMIN.");
+                return;
+            }
+
+            var usuarioExcluir = usuarios.FirstOrDefault(u => u.Nome.Equals(nomeSelecionado, StringComparison.OrdinalIgnoreCase));
+            if (usuarioExcluir != null)
+            {
+                usuarios.Remove(usuarioExcluir);
+                SalvarUsuarios();
+                AtualizarLista();
+                LimparCampos();
+                MessageBox.Show("Usuário excluído com sucesso!");
+            }
         }
     }
 }
