@@ -128,5 +128,32 @@ namespace PROVAGUI
                 MessageBox.Show("Usuário excluído com sucesso!");
             }
         }
+
+        private void btnExcluir_Click_1(object sender, EventArgs e)
+        {
+            if (lstUsuarios.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione um usuário para excluir.");
+                return;
+            }
+
+            string nomeSelecionado = lstUsuarios.SelectedItem.ToString();
+
+            if (nomeSelecionado.Equals("ADMIN", StringComparison.OrdinalIgnoreCase))
+            {
+                MessageBox.Show("Não é permitido excluir o usuário ADMIN.");
+                return;
+            }
+
+            var usuarioExcluir = usuarios.FirstOrDefault(u => u.Nome.Equals(nomeSelecionado, StringComparison.OrdinalIgnoreCase));
+            if (usuarioExcluir != null)
+            {
+                usuarios.Remove(usuarioExcluir);
+                SalvarUsuarios();
+                AtualizarLista();
+                LimparCampos();
+                MessageBox.Show("Usuário excluído com sucesso!");
+            }
+        }
     }
 }

@@ -87,6 +87,7 @@
             btnExcluir.TabIndex = 5;
             btnExcluir.Text = "EXCLUIR";
             btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += btnExcluir_Click_1;
             // 
             // lstUsuarios
             // 
