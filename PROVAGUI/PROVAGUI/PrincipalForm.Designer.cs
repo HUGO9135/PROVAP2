@@ -30,13 +30,15 @@
         {
             btnCadastroUsuario = new Button();
             btnCadastroCliente = new Button();
+            btnCadastroProdutos = new Button();
+            btnCadastroPedidos = new Button();
             SuspendLayout();
             // 
             // btnCadastroUsuario
             // 
-            btnCadastroUsuario.Location = new Point(383, 162);
+            btnCadastroUsuario.Location = new Point(367, 162);
             btnCadastroUsuario.Name = "btnCadastroUsuario";
-            btnCadastroUsuario.Size = new Size(104, 29);
+            btnCadastroUsuario.Size = new Size(240, 94);
             btnCadastroUsuario.TabIndex = 0;
             btnCadastroUsuario.Text = "USUARIO";
             btnCadastroUsuario.UseVisualStyleBackColor = true;
@@ -52,11 +54,33 @@
             btnCadastroCliente.UseVisualStyleBackColor = true;
             btnCadastroCliente.Click += btnCadastroCliente_Click;
             // 
+            // btnCadastroProdutos
+            // 
+            btnCadastroProdutos.Location = new Point(121, 262);
+            btnCadastroProdutos.Name = "btnCadastroProdutos";
+            btnCadastroProdutos.Size = new Size(240, 94);
+            btnCadastroProdutos.TabIndex = 2;
+            btnCadastroProdutos.Text = "CADASTRO PRODUTOS";
+            btnCadastroProdutos.UseVisualStyleBackColor = true;
+            btnCadastroProdutos.Click += btnCadastroProdutos_Click;
+            // 
+            // btnCadastroPedidos
+            // 
+            btnCadastroPedidos.Location = new Point(367, 262);
+            btnCadastroPedidos.Name = "btnCadastroPedidos";
+            btnCadastroPedidos.Size = new Size(240, 94);
+            btnCadastroPedidos.TabIndex = 3;
+            btnCadastroPedidos.Text = "CADASTRO PEDIDOS";
+            btnCadastroPedidos.UseVisualStyleBackColor = true;
+            btnCadastroPedidos.Click += btnCadastroPedidos_Click;
+            // 
             // PrincipalForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnCadastroPedidos);
+            Controls.Add(btnCadastroProdutos);
             Controls.Add(btnCadastroCliente);
             Controls.Add(btnCadastroUsuario);
             Name = "PrincipalForm";
@@ -69,5 +93,7 @@
         private Button btnCadastroUsuario;
         private Button button1;
         private Button btnCadastroCliente;
+        private Button btnCadastroProdutos;
+        private Button btnCadastroPedidos;
     }
 }
